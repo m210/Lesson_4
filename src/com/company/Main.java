@@ -3,11 +3,15 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        task1();
+//        task1();
+//
+//        task2();
+//
+//        task3();
 
-        task2();
+        task4();
 
-        task3();
+        task5();
     }
 
     public static void task1() {
@@ -43,4 +47,31 @@ public class Main {
                 System.out.println(i);
         }
     }
+
+    public static void task4() {
+        for(int i = 1; i <= 30; i++) {
+            System.out.print(i + ": ");
+            if((i % 3) == 0 && (i % 5) == 0)
+                System.out.print("ping pong\n");
+            else if((i % 3) == 0)
+                System.out.print("ping\n");
+            else if((i % 5) == 0)
+                System.out.print("pong\n");
+            else
+                System.out.print("\n");
+        }
+    }
+
+    public static void task5() {
+        int count = 8, p1 = 0, p2 = 1;
+        while(count-- > 0) {
+            int sum = p2 + p1;
+            p1 = p2;
+            p2 = sum;
+
+            System.out.print(sum + " ");
+        }
+        System.out.println();
+    }
+
 }
